@@ -6,6 +6,11 @@ import WhyUs from "@/components/WhyUs";
 import HowToWorks from "@/components/HowToWorks";
 import WhatPeopleSay from "@/components/WhatPeopleSay";
 import SuccessStory from "@/components/SuccessStory";
+import OurPodcast from "@/components/OurPodcast";
+import Questions from "@/components/Questions";
+import Faq from "@/components/Faq";
+import MetroSolver from "@/components/MetroSolver";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -17,6 +22,11 @@ export default function Home() {
       <HowToWorks />
       <WhatPeopleSay />
       <SuccessStory />
+      <OurPodcast  />
+      <Questions />
+      <Faq />
+      <MetroSolver />
+      <Footer />
     </div>
   );
 }

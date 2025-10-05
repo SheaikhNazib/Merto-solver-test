@@ -42,7 +42,7 @@ export default function SuccessStory() {
 
           <p className="text-sm sm:text-base text-white/70 mb-10">
             Based on the description of Metro Solver and the image provided, here is a
-            6-step process that Metro Solver uses to scale a customer's business
+            6-step process that Metro Solver uses to scale a customer&apos;s business
           </p>
 
           {/* Tabs - wide pill buttons like screenshot */}

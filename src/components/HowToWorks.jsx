@@ -104,21 +104,15 @@ const HowToWorks = () => {
 
 
 
-                    {/* CENTER Circle (use decorative image) */}
+                    {/* CENTER - replaced decorative image with centered Metro Solver logo and tagline */}
                     <div className="flex justify-center items-center relative my-8 lg:my-0">
-                        <div className="relative">
-                            {/* Decorative circle image from public */}
-                            <img src="/circle.png" alt="circle" className="w-72 h-72 rounded-full object-cover block" />
+                        <div className="flex items-center gap-4 bg-transparent">
+                            {/* logo icon (use your project's public image - replace if you have a dedicated logo) */}
+                            <img src="/circle.png" alt="Metro Solver logo" className="w-20 h-12 object-contain" />
 
-                            {/* number badges removed as requested */}
-
-                            {/* Center Content overlayed on top of the image */}
-                            <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                                <div className="w-56 h-56 rounded-full bg-gradient-to-br from-purple-900/50 to-slate-900/30 backdrop-blur-xl border border-purple-500/20 flex items-center justify-center shadow-2xl shadow-purple-500/20">
-                                    <h2 className="text-3xl md:text-4xl font-bold text-white text-center leading-tight pointer-events-auto">
-                                        How<br />to Works?
-                                    </h2>
-                                </div>
+                            <div className="flex flex-col">
+                                <div className="text-xl md:text-2xl font-bold text-white tracking-wide">METRO SOLVER</div>
+                                <div className="text-xs text-white/70 mt-1">your it partner</div>
                             </div>
                         </div>
                     </div>

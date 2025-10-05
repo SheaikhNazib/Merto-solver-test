@@ -13,7 +13,7 @@ const WhatPeopleSay = () => {
         <h2 id="testimonials-heading" className="text-4xl md:text-5xl font-extrabold text-white">What People Say</h2>
         <p className="text-slate-200 max-w-3xl mx-auto mt-3 mb-8 leading-7">
           Based on the description of Metro Solver and the image provided, here is a
-          6-step process that Metro Solver uses to scale a customer's business
+          6-step process that Metro Solver uses to scale a customer&apos;s business
         </p>
 
         <div className="flex flex-col items-center gap-6">

@@ -1,5 +1,5 @@
 "use client"
-import React, { useEffect, useState, useRef } from 'react'
+import React from 'react'
 import Link from 'next/link'
 
 const OurServices = () => {
@@ -169,57 +169,12 @@ const OurServices = () => {
     },
   ]
 
-  const [logoLoaded, setLogoLoaded] = useState(false)
-  const logoContainer = useRef(null)
-  const animRef = useRef(null)
-
-  useEffect(() => {
-    // Load lottie-web from CDN to avoid adding a package and peer dependency conflicts.
-    const existing = document.querySelector('script[data-lottie=cdn]')
-    const path = '/Lottie%20Files/Logo.json'
-
-    function start() {
-      try {
-        // eslint-disable-next-line no-undef
-        animRef.current = window.lottie.loadAnimation({
-          container: logoContainer.current,
-          renderer: 'svg',
-          loop: true,
-          autoplay: true,
-          path,
-        })
-        setLogoLoaded(true)
-      } catch (err) {
-        console.error('Failed to start lottie animation', err)
-      }
-    }
-
-    if (window.lottie) {
-      start()
-      return () => animRef.current?.destroy()
-    }
-
-    if (!existing) {
-      const s = document.createElement('script')
-      s.src = 'https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js'
-      s.async = true
-      s.setAttribute('data-lottie', 'cdn')
-      s.onload = start
-      s.onerror = () => console.error('Failed to load lottie-web from CDN')
-      document.body.appendChild(s)
-      return () => {
-        animRef.current?.destroy()
-        // don't remove script to avoid reloading on next mount
-      }
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
+  // Logo/animation removed — simplified badge without lottie
 
   return (
     <section className="bg-[#0a0a1f] text-white py-16 px-4 sm:px-6 lg:px-8 relative">
       {/* Discount Badge */}
       <div className="absolute top-8 left-8 bg-black/80 backdrop-blur-sm text-white px-4 py-2 rounded-lg text-sm font-medium flex items-center gap-2">
-        <div className="w-9 h-6 flex items-center" ref={logoContainer} aria-hidden={!logoLoaded}></div>
         <span>Get My 15% OFF</span>
         <button className="text-white hover:text-gray-300 ml-2">
           <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
